@@ -3,4 +3,4 @@ This code accompanies the
 blog entry.
 
 This script has issues!
-[latest version](../2021-04-15-bash-escaping-issue-part-3)
+[final version](../2021-04-15-copying-a-bash-environment-to-a-new-shell)
