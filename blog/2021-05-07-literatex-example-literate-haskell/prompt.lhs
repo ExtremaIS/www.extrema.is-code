@@ -26,7 +26,7 @@ make ghci-nix
 [literate Haskell]: <https://wiki.haskell.org/Literate_programming>
 [TTC (Textual Type Classes)]: <https://github.com/ExtremaIS/ttc-haskell#ttc-textual-type-classes>
 [`/examples/prompt`]: <https://github.com/ExtremaIS/ttc-haskell/tree/main/examples/prompt>
-[source and `Makefile`]: <https://github.com/ExtremaIS/www.extrema.is-code/tree/main/blog/2021-05-02-literatex-example-literate-haskell>
+[source and `Makefile`]: <https://github.com/ExtremaIS/www.extrema.is-code/tree/main/blog/2021-05-07-literatex-example-literate-haskell>
 [Nix]: <https://nixos.org/>
 [Stack]: <https://www.haskellstack.org/>
 
