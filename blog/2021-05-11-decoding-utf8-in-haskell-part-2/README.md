@@ -3,7 +3,3 @@ This code accompanies the
 blog entry.
 
 Data file: [COVID-19 Case Surveillance Public Use Data](https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data/vbim-akqf) CSV file
-
-One of the benchmark implementations skips blank lines!  The CSV file does not
-contain blank lines, but it is an issue when processing other files.
-[final version](../2021-05-11-decoding-utf8-in-haskell-part-2)

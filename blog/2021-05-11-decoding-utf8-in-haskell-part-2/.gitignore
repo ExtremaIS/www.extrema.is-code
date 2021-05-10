@@ -1,0 +1,6 @@
+# project
+*.csv
+
+# stack
+.stack-work
+*.yaml.lock
