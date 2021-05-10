@@ -1,0 +1,75 @@
+name:           bench-text
+version:        0.0.0.0
+synopsis:       UTF-8 decoding benchmarks
+
+homepage:       https://www.extrema.is/blog/2021/05/10/decoding-utf8-in-haskell
+author:         Travis Cardwell <travis.cardwell@extrema.is>
+maintainer:     Travis Cardwell <travis.cardwell@extrema.is>
+copyright:      Copyright (c) 2021 Travis Cardwell
+license:        MIT
+license-file:   LICENSE
+
+cabal-version:  1.24
+build-type:     Simple
+
+extra-source-files:
+  README.md
+
+executable bench-cbs
+  main-is: bench-cbs.hs
+  other-modules:
+      Lib
+  build-depends:
+      base
+    , conduit
+    , text
+    , time
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -with-rtsopts=-T
+
+executable bench-cbslines
+  main-is: bench-cbslines.hs
+  other-modules:
+      Lib
+  build-depends:
+      base
+    , conduit
+    , text
+    , time
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -with-rtsopts=-T
+
+executable bench-bs
+  main-is: bench-bs.hs
+  other-modules:
+      Lib
+  build-depends:
+      base
+    , bytestring
+    , text
+    , time
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -with-rtsopts=-T
+
+executable bench-bslines
+  main-is: bench-bslines.hs
+  other-modules:
+      Lib
+  build-depends:
+      base
+    , bytestring
+    , text
+    , time
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -with-rtsopts=-T
+
+executable bench-text
+  main-is: bench-text.hs
+  other-modules:
+      Lib
+  build-depends:
+      base
+    , text
+    , time
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -with-rtsopts=-T
