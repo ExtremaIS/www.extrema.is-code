@@ -1,0 +1,6 @@
+# project
+output.txt
+
+# stack
+.stack-work
+*.yaml.lock
