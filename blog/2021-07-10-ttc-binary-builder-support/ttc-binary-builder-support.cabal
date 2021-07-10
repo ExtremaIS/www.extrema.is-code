@@ -1,0 +1,15 @@
+name:          ttc-binary-builder-support
+version:       0.0.0.0
+cabal-version: 1.24
+build-type:    Simple
+
+executable ttc-binary-builder-support
+  main-is: Main.hs
+  build-depends:
+      base >=4.7 && <5
+    , binary
+    , bytestring
+    , text
+    , ttc
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
