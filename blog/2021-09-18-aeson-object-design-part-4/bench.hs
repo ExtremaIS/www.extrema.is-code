@@ -1,15 +1,3 @@
-#!/usr/bin/env stack
-{- stack
-  script
-  --resolver lts-18.10
-  --package containers
-  --package criterion
-  --package deepseq
-  --package text
-  --package unordered-containers
-  --package vector
--}
-
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TupleSections #-}
 
