@@ -1,0 +1,56 @@
+name:           parsing
+version:        0.0.0.0
+cabal-version:  1.24
+build-type:     Simple
+
+library
+  hs-source-dirs: src
+  exposed-modules:
+      DecimalBounded
+    , DecimalBoundedStrict
+    , DecimalMaxSO
+    , DecimalMaxFixed
+    , DecimalMaxStrict
+  build-depends:
+      attoparsec
+    , base
+    , bytestring
+    , text
+  default-language: Haskell2010
+  ghc-options: -Wall
+
+test-suite test-parsing
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: Spec.hs
+  other-modules:
+      Decimal.Test
+    , DecimalBounded.Test
+    , DecimalBoundedStrict.Test
+    , DecimalMaxFixed.Test
+    , DecimalMaxSO.Test
+    , DecimalMaxStrict.Test
+  build-depends:
+      attoparsec
+    , base
+    , bytestring
+    , parsing
+    , tasty
+    , tasty-hunit
+    , text
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  hs-source-dirs: bench
+  main-is: Bench.hs
+  build-depends:
+      attoparsec
+    , base
+    , deepseq
+    , gauge
+    , parsing
+    , text
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded
