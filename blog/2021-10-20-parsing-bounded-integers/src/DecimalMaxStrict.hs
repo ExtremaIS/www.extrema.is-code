@@ -34,4 +34,4 @@ decimalMax isStrict valueMax = (<?> "decimalMax") $ do
 ------------------------------------------------------------------------------
 
 word8 :: Bool -> AT.Parser Word8
-word8 isStrict = decimalMax isStrict $ fromIntegral @Word8 @Int maxBound
+word8 isStrict = decimalMax isStrict $ fromIntegral @Word8 @Word maxBound
