@@ -40,13 +40,16 @@ strictTests = testGroup "Strict"
     , testCase "large2" $
         Left "boundedDecimal: Failed reading: overflow"
           @=? parseWord8 True "1001"
+    , testCase "paddedOK" $
+        Left "boundedDecimal > strictDecimal: Failed reading: leading zero"
+          @=? parseWord8 True "00042"
+    , testCase "paddedLarge" $
+        Left "boundedDecimal > strictDecimal: Failed reading: leading zero"
+          @=? parseWord8 True "01000"
     , testCase "negative" $
         Left "boundedDecimal > strictDecimal > digit: Failed reading: satisfy"
           @=? parseWord8 True "-1"
     , testCase "imaginary" $ Left "endOfInput" @=? parseWord8 True "5i"
-    , testCase "leadingZero" $
-        Left "boundedDecimal > strictDecimal: Failed reading: leading zero"
-          @=? parseWord8 True "042"
     ]
 
 ------------------------------------------------------------------------------
@@ -64,11 +67,14 @@ lenientTests = testGroup "Lenient"
     , testCase "large2" $
         Left "boundedDecimal: Failed reading: overflow"
           @=? parseWord8 False "1001"
+    , testCase "paddedOK" $ Right 42 @=? parseWord8 False "00042"
+    , testCase "paddedLarge" $
+        Left "boundedDecimal: Failed reading: overflow"
+          @=? parseWord8 False "01000"
     , testCase "negative" $
         Left "boundedDecimal > decimal: Failed reading: takeWhile1"
           @=? parseWord8 False "-1"
     , testCase "imaginary" $ Left "endOfInput" @=? parseWord8 False "5i"
-    , testCase "leadingZero" $ Right 42 @=? parseWord8 False "042"
     ]
 
 ------------------------------------------------------------------------------

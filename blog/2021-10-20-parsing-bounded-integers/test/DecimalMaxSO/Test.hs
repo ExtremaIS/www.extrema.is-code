@@ -41,6 +41,10 @@ tests = testGroup "DecimalMaxSO"
     , testCase "large1" $
         Left "Failed reading: decimalMax: parsed decimal exceeded 255"
           @=? parseWord8 "1001"
+    , testCase "paddedOK" $ Right 42 @=? parseWord8 "00042"
+    , testCase "paddedLarge" $
+        Left "Failed reading: decimalMax: parsed decimal exeeded 255"
+          @=? parseWord8 "01000"
     , testCase "negative" $
         Left "Failed reading: expected decimal" @=? parseWord8 "-1"
     , testCase "imaginary" $ Left "endOfInput" @=? parseWord8 "5i"

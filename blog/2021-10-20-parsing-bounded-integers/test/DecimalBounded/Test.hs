@@ -35,6 +35,9 @@ tests = testGroup "DecimalBounded"
     , testCase "large1" $ Left "Failed reading: overflow" @=? parseWord8 "256"
     , testCase "large2" $
         Left "Failed reading: overflow" @=? parseWord8 "1001"
+    , testCase "paddedOK" $ Right 42 @=? parseWord8 "00042"
+    , testCase "paddedLarge" $
+        Left "Failed reading: overflow" @=? parseWord8 "01000"
     , testCase "negative" $
         Left "Failed reading: takeWhile1" @=? parseWord8 "-1"
     , testCase "imaginary" $ Left "endOfInput" @=? parseWord8 "5i"
