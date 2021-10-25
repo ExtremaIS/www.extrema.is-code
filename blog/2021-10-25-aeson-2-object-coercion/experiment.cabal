@@ -1,0 +1,34 @@
+name:           experiment
+version:        0.0.0.0
+cabal-version:  1.24
+build-type:     Simple
+
+library
+  hs-source-dirs: src
+  exposed-modules:
+      Experiment
+  build-depends:
+      aeson
+    , base
+    , containers
+    , ginger
+    , text
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+  ghc-options: -Wall
+
+benchmark bench
+  type: exitcode-stdio-1.0
+  hs-source-dirs: bench
+  main-is: Bench.hs
+  build-depends:
+      base
+    , experiment
+    , gauge
+    , ginger
+    , mtl
+    , text
+    , yaml
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded

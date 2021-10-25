@@ -1,0 +1,341 @@
+---
+
+languages:
+
+  - code: de
+    label: Deutsche
+    numbers:
+      - number: 0
+        label: 'null'
+      - number: 1
+        label: eins
+      - number: 2
+        label: zwei
+      - number: 3
+        label: drei
+      - number: 4
+        label: vier
+      - number: 5
+        label: fünf
+      - number: 6
+        label: sechs
+      - number: 7
+        label: sieben
+      - number: 8
+        label: acht
+      - number: 9
+        label: neun
+      - number: 10
+        label: zehn
+
+  - code: en
+    label: English
+    numbers:
+      - number: 0
+        label: zero
+      - number: 1
+        label: one
+      - number: 2
+        label: two
+      - number: 3
+        label: three
+      - number: 4
+        label: four
+      - number: 5
+        label: five
+      - number: 6
+        label: six
+      - number: 7
+        label: seven
+      - number: 8
+        label: eight
+      - number: 9
+        label: nine
+      - number: 10
+        label: ten
+
+  - code: es
+    label: Español
+    numbers:
+      - number: 0
+        label: cero
+      - number: 1
+        label: uno
+      - number: 2
+        label: dos
+      - number: 3
+        label: tres
+      - number: 4
+        label: cuatro
+      - number: 5
+        label: cinco
+      - number: 6
+        label: seis
+      - number: 7
+        label: siete
+      - number: 8
+        label: ocho
+      - number: 9
+        label: nueve
+      - number: 10
+        label: diez
+
+  - code: fr
+    label: Français
+    numbers:
+      - number: 0
+        label: zéro
+      - number: 1
+        label: un
+      - number: 2
+        label: deux
+      - number: 3
+        label: trois
+      - number: 4
+        label: quatre
+      - number: 5
+        label: cinq
+      - number: 6
+        label: six
+      - number: 7
+        label: sept
+      - number: 8
+        label: huit
+      - number: 9
+        label: neuf
+      - number: 10
+        label: dix
+
+  - code: he
+    label: עברית
+    numbers:
+      - number: 0
+        label: אפס
+      - number: 1
+        label: אחת
+      - number: 2
+        label: שתיים
+      - number: 3
+        label: שלוש
+      - number: 4
+        label: ארבע
+      - number: 5
+        label: חמש
+      - number: 6
+        label: שש
+      - number: 7
+        label: שבע
+      - number: 8
+        label: שמונה
+      - number: 9
+        label: תשע
+      - number: 10
+        label: עשר
+
+  - code: it
+    label: Italiano
+    numbers:
+      - number: 0
+        label: zero
+      - number: 1
+        label: uno
+      - number: 2
+        label: due
+      - number: 3
+        label: tre
+      - number: 4
+        label: quattro
+      - number: 5
+        label: cinque
+      - number: 6
+        label: sei
+      - number: 7
+        label: sette
+      - number: 8
+        label: otto
+      - number: 9
+        label: nove
+      - number: 10
+        label: dieci
+
+  - code: ja
+    label: 日本語
+    numbers:
+      - number: 0
+        label: ゼロ
+      - number: 1
+        label: 一
+      - number: 2
+        label: 二
+      - number: 3
+        label: 三
+      - number: 4
+        label: 四
+      - number: 5
+        label: 五
+      - number: 6
+        label: 六
+      - number: 7
+        label: 七
+      - number: 8
+        label: 八
+      - number: 9
+        label: 九
+      - number: 10
+        label: 十
+
+  - code: ko
+    label: 한국어
+    numbers:
+      - number: 0
+        label: 영
+      - number: 1
+        label: 하나
+      - number: 2
+        label: 둘
+      - number: 3
+        label: 셋
+      - number: 4
+        label: 넷
+      - number: 5
+        label: 다섯
+      - number: 6
+        label: 여섯
+      - number: 7
+        label: 일곱
+      - number: 8
+        label: 여덟
+      - number: 9
+        label: 아홉
+      - number: 10
+        label: 열
+
+  - code: pt
+    label: Português
+    numbers:
+      - number: 0
+        label: zero
+      - number: 1
+        label: um
+      - number: 2
+        label: dois
+      - number: 3
+        label: três
+      - number: 4
+        label: quatro
+      - number: 5
+        label: cinco
+      - number: 6
+        label: seis
+      - number: 7
+        label: sete
+      - number: 8
+        label: oito
+      - number: 9
+        label: nove
+      - number: 10
+        label: dez
+
+  - code: ru
+    label: Русский
+    numbers:
+      - number: 0
+        label: ноль
+      - number: 1
+        label: один
+      - number: 2
+        label: два
+      - number: 3
+        label: три
+      - number: 4
+        label: четыре
+      - number: 5
+        label: пять
+      - number: 6
+        label: шесть
+      - number: 7
+        label: семь
+      - number: 8
+        label: восемь
+      - number: 9
+        label: девять
+      - number: 10
+        label: десять
+
+  - code: th
+    label: ไทย
+    numbers:
+      - number: 0
+        label: ศูนย์
+      - number: 1
+        label: หนึ่ง
+      - number: 2
+        label: สอง
+      - number: 3
+        label: สาม
+      - number: 4
+        label: สี่
+      - number: 5
+        label: ห้า
+      - number: 6
+        label: หก
+      - number: 7
+        label: เจ็ด
+      - number: 8
+        label: แปด
+      - number: 9
+        label: เก้า
+      - number: 10
+        label: สิบ
+
+  - code: vi
+    label: Tiếng Việt
+    numbers:
+      - number: 0
+        label: không
+      - number: 1
+        label: một
+      - number: 2
+        label: hai
+      - number: 3
+        label: ba
+      - number: 4
+        label: bốn
+      - number: 5
+        label: năm
+      - number: 6
+        label: sáu
+      - number: 7
+        label: bảy
+      - number: 8
+        label: tám
+      - number: 9
+        label: chín
+      - number: 10
+        label: mười
+
+  - code: zh
+    label: 中文
+    numbers:
+      - number: 0
+        label: 零
+      - number: 1
+        label: 一
+      - number: 2
+        label: 二
+      - number: 3
+        label: 三
+      - number: 4
+        label: 四
+      - number: 5
+        label: 五
+      - number: 6
+        label: 六
+      - number: 7
+        label: 七
+      - number: 8
+        label: 八
+      - number: 9
+        label: 九
+      - number: 10
+        label: 十
