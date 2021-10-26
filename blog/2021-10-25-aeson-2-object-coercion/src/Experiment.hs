@@ -1,7 +1,7 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module Experiment where
+module Experiment (unsafeAesonToGVal) where
 
 -- https://hackage.haskell.org/package/aeson
 import qualified Data.Aeson as A
@@ -97,6 +97,12 @@ unsafeAesonToGVal =
 unsafeAesonToGVal = Ginger.toGVal
 #endif
 
+------------------------------------------------------------------------------
+
+#if MIN_VERSION_aeson(2,0,0)
+
 setAsJSON :: A.Value -> Ginger.GVal m -> Ginger.GVal m
 setAsJSON v gv = gv { Ginger.asJSON = Just v }
 {-# INLINE setAsJSON #-}
+
+#endif

@@ -7,11 +7,14 @@ library
   hs-source-dirs: src
   exposed-modules:
       Experiment
+    , Experiment2
   build-depends:
       aeson
     , base
     , containers
+    , data-default-class
     , ginger
+    , scientific
     , text
     , unordered-containers
     , vector

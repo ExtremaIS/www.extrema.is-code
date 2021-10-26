@@ -23,7 +23,8 @@ import Data.Text (Text)
 import qualified Data.Yaml as Yaml
 
 -- (experiment)
-import Experiment (unsafeAesonToGVal)
+import qualified Experiment
+import qualified Experiment2
 
 ------------------------------------------------------------------------------
 
@@ -64,7 +65,9 @@ main = Gauge.defaultMain
         Gauge.bgroup "l10n"
           [ Gauge.bench "ginger" $
               Gauge.nf (render . Ginger.toGVal) l10n
-          , Gauge.bench "unsafeAesonToGVal" $
-              Gauge.nf (render . unsafeAesonToGVal) l10n
+          , Gauge.bench "unsafeAesonToGVal (1)" $
+              Gauge.nf (render . Experiment.unsafeAesonToGVal) l10n
+          , Gauge.bench "unsafeAesonToGVal (2)" $
+              Gauge.nf (render . Experiment2.unsafeAesonToGVal) l10n
           ]
     ]
