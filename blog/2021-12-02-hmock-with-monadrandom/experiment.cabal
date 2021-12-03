@@ -8,7 +8,6 @@ test-suite experiment-test
   main-is: Experiment.hs
   build-depends:
       base
-    , data-default-class
     , explainable-predicates
     , HMock
     , MonadRandom

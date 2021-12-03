@@ -24,14 +24,14 @@ import Test.Predicates (anything)
 import qualified Test.HMock as HMock
 import Test.HMock ((|=>))
 
+-- https://hackage.haskell.org/package/MonadRandom
+import qualified Control.Monad.Random.Strict as Rand
+
 -- https://hackage.haskell.org/package/tasty
 import Test.Tasty (defaultMain)
 
 -- https://hackage.haskell.org/package/tasty-hunit
 import Test.Tasty.HUnit (assertBool, testCase)
-
--- https://hackage.haskell.org/package/MonadRandom
-import qualified Control.Monad.Random.Strict as Rand
 
 ------------------------------------------------------------------------------
 
