@@ -5,5 +5,5 @@ packages:
 
 extra-deps:
   - explainable-predicates-0.1.2.0
-  - git: https://github.com/TravisCardwell/HMock.git
-    commit: 43e4ad82a92f539c1e1f33f38a71b855f875de1d
+  - git: https://github.com/cdsmith/HMock.git
+    commit: b073d0ed096e38f46f1cb8ab526e2e92f24adbbb
