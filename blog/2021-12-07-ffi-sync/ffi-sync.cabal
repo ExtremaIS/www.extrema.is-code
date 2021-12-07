@@ -1,0 +1,25 @@
+name:           ffi-sync
+version:        0.0.0.0
+cabal-version:  1.24
+build-type:     Simple
+
+library
+  hs-source-dirs: src
+  exposed-modules:
+      FFISync
+  if !os(windows)
+    other-modules:
+        FFISync.Unistd
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+  ghc-options: -Wall
+
+executable ffi-sync
+  hs-source-dirs: app
+  main-is: Main.hs
+  build-depends:
+      base
+    , ffi-sync
+  default-language: Haskell2010
+  ghc-options: -Wall
