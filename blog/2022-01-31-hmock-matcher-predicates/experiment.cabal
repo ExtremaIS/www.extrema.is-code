@@ -1,0 +1,16 @@
+name:           experiment
+version:        0.0.0.0
+cabal-version:  1.24
+build-type:     Simple
+
+test-suite experiment-test
+  type: exitcode-stdio-1.0
+  main-is: Experiment.hs
+  build-depends:
+      base
+    , explainable-predicates
+    , HMock
+    , tasty
+    , tasty-hunit
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
