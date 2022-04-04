@@ -141,10 +141,10 @@ the definition.  I also use the [LambdaCase][] extension.
 
 The `foldExpr` function folds an expression using the provided "algebra."  It
 uses the `Functor` instances to traverse the recursive parts.  Perhaps due to
-my [Scheme][] background, I prefer to capture the first argument in a closure
-and use a helper function for the recursion.  Since the type signature for the
-helper function references type variables in the type signature of `foldExpr`,
-the [ScopedTypeVariables][] extension is required.
+my [Scheme][] background, I prefer to use a helper function for the recursion,
+with the first argument in scope.  Since the type signature for the helper
+function references type variables in the type signature of `foldExpr`, the
+[ScopedTypeVariables][] extension is required.
 
 [Scheme]: <https://en.wikipedia.org/wiki/Scheme_(programming_language)>
 [ScopedTypeVariables]: <https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/scoped_type_variables.html#extension-ScopedTypeVariables>
@@ -388,7 +388,12 @@ done in a single pass because one rewrite may enable further rewrites in
 sub-expressions.
 
 I *tried* implementing this using the following function, which uses
-mutually-recursive helper functions.
+mutually-recursive helper functions.  The `go` function traverses
+(sub-)expressions, possibly rewriting them from the buttom up using the `f'`
+function.  The `f'` function attempts to rewrite an expression using the
+passed rewrite function.  If the expression is rewritten, `go` is called on
+the result so that any newly enabled rewrites in sub-expressions can be
+performed.
 
 > rewriteExpr
 >   :: forall f. Functor f
