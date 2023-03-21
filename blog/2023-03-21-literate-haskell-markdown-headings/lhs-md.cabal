@@ -1,0 +1,16 @@
+name:           lhs-md
+version:        0.0.0.0
+cabal-version:  1.24
+build-type:     Simple
+
+executable demo
+  main-is: Demo.lhs
+  build-depends: base
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+
+executable gen-markdown
+  main-is: gen-markdown.hs
+  build-depends: base, conduit, literatex, text
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
