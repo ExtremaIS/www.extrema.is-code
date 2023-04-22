@@ -1,0 +1,30 @@
+name:           experiment
+version:        0.0.0.0
+
+cabal-version:  1.24
+build-type:     Simple
+tested-with:
+  GHC ==9.2.7
+
+library
+  hs-source-dirs: src
+  exposed-modules:
+      Experiment
+  build-depends:
+      base
+  default-language: Haskell2010
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -Wall
+
+test-suite experiment-test
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: Test.hs
+  build-depends:
+      base
+    , experiment
+    , tasty
+    , tasty-hunit
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
