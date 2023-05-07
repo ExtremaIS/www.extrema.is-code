@@ -1,0 +1,3 @@
+packages: ./experiment.cabal
+
+with-compiler: ghc-9.6.1
