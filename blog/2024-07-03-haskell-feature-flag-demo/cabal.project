@@ -1,0 +1,3 @@
+packages: ./feature-flag-demo.cabal
+
+with-compiler: ghc-9.6.5

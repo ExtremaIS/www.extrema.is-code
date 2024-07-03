@@ -1,0 +1,69 @@
+cabal-version:  3.4
+name:           feature-flag-demo
+version:        0.0.0.0
+license:        MIT
+synopsis:       Feature flag demonstration
+author:         Travis Cardwell <travis.cardwell@extrema.is>
+
+tested-with: GHC ==9.6.5
+
+extra-doc-files:
+  README.md
+
+library
+  hs-source-dirs: src
+  exposed-modules:
+      Demo1.FeatureFlag
+    , Demo1.FeatureFlag.DB
+    , Demo1.IO
+    , Demo2.FeatureFlag
+    , Demo2.FeatureFlag.DB
+    , Demo2.IO
+  build-depends:
+      base ^>=4.18.2.1
+    , containers ^>=0.6.7
+    , dependent-map ^>=0.4.0.0
+    , dependent-sum ^>=0.7.2.0
+    , dependent-sum-template ^>=0.1.1.1
+    , transformers ^>=0.6.1.0
+  default-language: Haskell2010
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -Wall
+
+executable demo1
+  hs-source-dirs: app
+  main-is: demo1.hs
+  build-depends:
+      base
+    , feature-flag-demo
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+
+executable demo2
+  hs-source-dirs: app
+  main-is: demo2.hs
+  build-depends:
+      base
+    , feature-flag-demo
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+
+test-suite feature-flag-demo-test
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is: Spec.hs
+  other-modules:
+      Demo1.IO.Test
+    , Demo2.IO.Test
+  build-depends:
+      base
+    , containers
+    , dependent-map
+    , dependent-sum
+    , feature-flag-demo
+    , tasty ^>=1.4.3
+    , tasty-hunit ^>=0.10.2
+    , tasty-quickcheck ^>=0.10.2
+  default-language: Haskell2010
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
