@@ -1,0 +1,6 @@
+packages: lazy-text-eq-bug.cabal
+
+--optional-packages: ./text/text.cabal
+
+--with-compiler: ghc-9.0.2
+with-compiler: ghc-9.2.8
